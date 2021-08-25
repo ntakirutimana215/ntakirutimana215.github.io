@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    button{
+        padding:20px;
+        margin:32em 0 0;
+        background-color: brown;
+        color:white;
+        font-size: 13px;
+        border: 1px solid brown;
+    }
+    .on{
+        border: 1px solid green; 
+        background-color: green;
+    }
+    .on:hover{
+        cursor: pointer;
+        background-color: rgb(13, 109, 13);
+
+    }
+    .off:hover{
+        border: 1px solid rgb(82, 5, 5);
+        cursor: pointer;
+        cursor:progress;
+    }
+</style>
+<body>
+     <img src="off.jpg" alt="" id="img">
+    <button class="off">Off</button>
+    <button class="on">ON</button> <br>
+<span></span>
+    <script>
+    var on = document.querySelector('.on')
+    var off = document.querySelector('.off');
+    var img = document.querySelector('#img');
+
+   var arr = [3,4,5743,2342]
+
+  setTimeout(function(){
+    document.querySelector('span').innerHTML = new Date
+  },800)
+
+     on.addEventListener('click',function(){
+         img.src = './on.jpg';
+         on.style.cursor = 'not-allowed'
+         off.style.cursor = 'pointer'
+
+     })
+
+     off.addEventListener('click',function(){
+        off.style.cursor = 'not-allowed'
+         console.log('d')
+         img.src = './off.jpg'
+         on.style.cursor = 'pointer'
+
+     })
+    </script>
+</body>
+</html>
